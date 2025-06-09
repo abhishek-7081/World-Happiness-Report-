@@ -1,0 +1,13 @@
+import plotly.express as px
+
+fig = px.scatter(df, 
+                 x="Logged GDP per capita", 
+                 y="Happiness score", 
+                 color="Regional indicator",
+                 hover_name="Country name",
+                 title="GDP per Capita vs Happiness Score (2023)",
+                 size='Healthy life expectancy',
+                 template='plotly_dark')
+
+fig.write_html("Visualizations/gdp_vs_happiness_plotly.html")
+fig.show()
